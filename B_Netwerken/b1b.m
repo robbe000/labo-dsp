@@ -1,6 +1,6 @@
 r = 8000;
 p = 1000;
-b = 62.5;
+b = 1;
 n = 200;
 a = 625;
 c = 250;
@@ -27,27 +27,69 @@ output = filter(b,a,input);
 subplot(6,1,1);
 plot(output);
 
-a= [1 -0];
+    %PZ plot van output bepalen
+    figure(3);
+    zplane(b, a);
+    
+    %amplitude- en faseresponsie
+    figure(8);
+    freqz(b, a);
+
+figure(2);
+a= [1 -0.5];
 output = filter(b,a,input);
 subplot(6,1,2);
 plot(output);
 
-a= [1 -0.5];
+    %PZ plot van output bepalen
+    figure(4);
+    zplane(b, a);
+    
+    %amplitude- en faseresponsie
+    figure(9);
+    freqz(b, a);
+
+figure(2);
+
+a= [1 -0.9];
 output = filter(b,a,input);
 subplot(6,1,3);
 plot(output);
 
-a= [1 -0.9];
+    %PZ plot van output bepalen
+    figure(5);
+    zplane(b, a);
+    
+    %amplitude- en faseresponsie
+    figure(10);
+    freqz(b, a);
+
+figure(2);
+
+a= [1 -1.0];
 output = filter(b,a,input);
 subplot(6,1,4);
 plot(output);
 
-a= [1 -1];
+    %PZ plot van output bepalen
+    figure(6);
+    zplane(b, a);
+    
+    %amplitude- en faseresponsie
+    figure(11);
+    freqz(b, a);
+
+figure(2);
+
+a= [1 -1.1];
 output = filter(b,a,input);
 subplot(6,1,5);
 plot(output);
 
-a= [1 -1.1];
-output = filter(b,a,input);
-subplot(6,1,6);
-plot(output);
+    %PZ plot van output bepalen
+    figure(7);
+    zplane(b, a);
+    
+    %amplitude- en faseresponsie
+    figure(12);
+    freqz(b, a);
