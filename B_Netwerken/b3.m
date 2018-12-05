@@ -4,7 +4,7 @@ a = [1, -(0.5), 0.25];
 %PZ plot van output bepalen
 figure(1);
 zplane(b, a);
-    
+
 %amplitude- en faseresponsie
 figure(2);
 freqz(b, a);
